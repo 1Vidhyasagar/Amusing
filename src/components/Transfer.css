@@ -3,13 +3,12 @@
   justify-content:center;
   align-items: center;
   text-align: center;
-    margin-top: 30px
 }
 
 .bucket {
 
   width: 250px;
-  height:75vh;
+  height:70vh;
   padding: 10px;
   border: 2px solid #2e2a2a;
   border-radius: 5%;
@@ -17,9 +16,6 @@
 
 }
 
-.bucket h3 {
-  margin-top: 0;
-}
 
 .itemA {
   display: flex;

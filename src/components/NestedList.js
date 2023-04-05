@@ -78,7 +78,15 @@ const data = [
 function App() {
   return (
     <div>
-      <Tree data={data} />
+      <div className="animate__animated animate__fadeInLeftBig animate__delay-0.7s">
+        <h2 style={{ fontWeight: "bold", textAlign: "center" }}>
+          Click on buttons
+        </h2>
+      </div>
+
+      <div className="animate__animated animate__fadeInRightBig animate__delay-0.7s">
+        <Tree data={data} />
+      </div>
     </div>
   );
 }

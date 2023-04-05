@@ -4,7 +4,7 @@ import Problem2 from "../src/components/NestedList";
 import Problem3 from "../src/components/Infinite";
 import Problem4 from "../src/components/Game"
 import Problem5 from "../src/components/Square";
-
+import "animate.css";
 import "./App.css"
 
 
@@ -34,9 +34,13 @@ function App() {
   };
  
   return (
-    <div>
+    <div class="animate__animated animate__fadeInUpBig animate__delay-0.5s ">
       <div className="container">
-        <p>Click on any of buttons here</p>
+        <div className="animate__animated animate__flash animate__slower animate__infinite animate__delay-0.1s">
+          <p className="flash">
+            click the buttons to the right & unleash power! &nbsp;
+          </p>
+        </div>
         <button onClick={() => handleButtonClick("Problem 1")}>
           Problem 1
         </button>
@@ -59,3 +63,4 @@ function App() {
 }
 
 export default App;
+

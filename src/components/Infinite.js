@@ -53,7 +53,10 @@ function ItemList() {
   }, [page]);
 
   return (
-    <div className="item-list">
+    <div className="item-list animate__animated animate__fadeInUp animate__delay-0.7s">
+      <h2 style={{ fontWeight: "bold", textAlign: "center", width: "100%" }}>
+        Enjoy an infinite scrolling of cats
+      </h2>
       {items.map((item) => (
         <div key={item.id} className="item">
           <h2>{item.title}</h2>

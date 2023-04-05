@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+//Logic
 const Game = () => {
   const [boxes, setBoxes] = useState(Array(9).fill(""));
   const [isGameRunning, setIsGameRunning] = useState(false);
@@ -77,9 +78,16 @@ const Game = () => {
   };
 
   return (
-    <div  style={{textAlign:"center"}}>
-      <h1>Hit the Box!</h1>
-      {!isGameRunning && <button onClick={handleStart}>Start Game</button>}
+    <div style={{ textAlign: "center" }}>
+      <div className="animate__animated animate__fadeInLeftBig animate__delay-0.7s">
+        <h2>Hit the Box!</h2>
+      </div>
+
+      {!isGameRunning && (
+        <div className="animate__animated animate__fadeInRightBig animate__delay-0.7s">
+          <button onClick={handleStart}>Start Game</button>
+        </div>
+      )}
       {isGameRunning && (
         <>
           <p>Time left: {timeLeft}</p>
@@ -89,7 +97,7 @@ const Game = () => {
               display: "grid",
               gridTemplateColumns: "repeat(3, minmax(100px, 1fr))",
               gap: "5px",
-              width: "350px",
+              width: "300px",
               margin: "0 auto",
             }}
           >
@@ -97,7 +105,7 @@ const Game = () => {
               <div
                 key={index}
                 style={{
-                  height: 100,
+                  height: 80,
                   backgroundColor: value === "HIT" ? "gray" : "gray",
                   display: "flex",
                   alignItems: "center",
@@ -112,7 +120,9 @@ const Game = () => {
               </div>
             ))}
           </div>
-          <button onClick={handleStop}>Stop Game</button>
+          <button style={{ marginTop: "20px" }} onClick={handleStop}>
+            Stop Game
+          </button>
         </>
       )}
     </div>

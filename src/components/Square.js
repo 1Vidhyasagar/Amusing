@@ -1,11 +1,9 @@
-// App.js
-
 import React, { useState } from "react";
 import "./Square.css";
 
 function App() {
   const [squares, setSquares] = useState([
-    { id: 0, x: 0, y: 0, size: 500, visible: true },
+    { id: 0, x: 0, y: 0, size: 300, visible: true },
   ]);
 
   const handleSquareClick = (clickedSquare) => {
@@ -55,7 +53,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="animate__animated animate__zoomInDown animate__delay-0.7s">
       {squares.map((square) => (
         <Square
           key={square.id}
@@ -65,7 +63,10 @@ function App() {
           visible={square.visible}
           onClick={() => handleSquareClick(square)}
         />
-      ))}
+      ))}{" "}
+      <div>
+        <h2 style={{ textAlign: "center" }}>Click in the square box</h2>
+      </div>
     </div>
   );
 }
@@ -80,8 +81,12 @@ function Square({ x, y, size, visible, onClick }) {
   };
 
   return (
-    <div className="square" style={style} onClick={onClick}>
-      {size <= 50 && (
+    <div
+      className="square"
+      style={style}
+      onClick={onClick}
+    >
+      {size <= 0 && (
         <>
           <div className="vertical-line" />
           <div className="horizontal-line" />

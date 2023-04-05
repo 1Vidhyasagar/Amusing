@@ -11,7 +11,7 @@ function Bucket({ title, items, selectedItems, onChange }) {
   };
 
   return (
-    <div className="bucket">
+    <div className="bucket"> 
       <h3>{title}</h3>
       {items.map((item) => (
         <label
@@ -74,33 +74,48 @@ function Transfer() {
   };
 
   return (
-    <div className="transfer">
-      <Bucket
-        title="Bucket 1"
-        items={items1}
-        selectedItems={selectedItems1}
-        onChange={handleSelect1}
-      />
-      <div className="buttons">
-        <button type="button" onClick={handleAdd}>
-          Add
-        </button>
-        <button type="button" onClick={handleAddAll}>
-          Add All
-        </button>
-        <button type="button" onClick={handleRemove}>
-          Remove
-        </button>
-        <button type="button" onClick={handleRemoveAll}>
-          Remove All
-        </button>
+    <div>
+      <div className="animate__animated animate__fadeInDownBig animate__delay-0.5s">
+        <h2
+          style={{ fontWeight: "bold", textAlign: "center", marginTop: "15px" }}
+        >
+          You can transfer the items in buckets
+        </h2>
       </div>
-      <Bucket
-        title="Bucket 2"
-        items={items2}
-        selectedItems={selectedItems2}
-        onChange={handleSelect2}
-      />
+
+      <div className="transfer">
+        <div className="animate__animated animate__fadeInLeftBig animate__delay-1s transfer">
+          <Bucket
+            title="Bucket 1"
+            items={items1}
+            selectedItems={selectedItems1}
+            onChange={handleSelect1}
+          />
+        </div>
+
+        <div className="animate__animated animate__zoomIn animate__delay-2s buttons">
+          <button type="button" onClick={handleAdd}>
+            Add
+          </button>
+          <button type="button" onClick={handleAddAll}>
+            Add All
+          </button>
+          <button type="button" onClick={handleRemove}>
+            Remove
+          </button>
+          <button type="button" onClick={handleRemoveAll}>
+            Remove All
+          </button>
+        </div>
+        <div className="animate__animated animate__fadeInRightBig animate__delay-1s transfer">
+          <Bucket
+            title="Bucket 2"
+            items={items2}
+            selectedItems={selectedItems2}
+            onChange={handleSelect2}
+          />
+        </div>
+      </div>
     </div>
   );
 }
