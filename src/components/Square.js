@@ -2,9 +2,35 @@ import React, { useState } from "react";
 import "./Square.css";
 
 function App() {
+
   const [squares, setSquares] = useState([
     { id: 0, x: 0, y: 0, size: 300, visible: true },
   ]);
+
+  const [previousSquares, setPreviousSquares] = useState([]);
+
+  const handleReset = () => {
+     const originalSquare = { id: 0, x: 0, y: 0, size: 300, visible: true };
+     setSquares([originalSquare]);
+  };
+
+const handleResetPrevious = () => {
+  if (previousSquares.length > 0) {
+    const prevSquares = [...previousSquares];
+    const removedSquares = prevSquares.pop();
+    const originalSquare = { id: 0, x: 0, y: 0, size: 300, visible: true };
+
+    const updatedSquares = removedSquares.map((s) => {
+      if (s.id === originalSquare.id) {
+        return { ...s, visible: true };
+      } else {
+        return s;
+      }
+    });
+    setSquares([...updatedSquares]);
+    setPreviousSquares(prevSquares);
+  }
+};
 
   const handleSquareClick = (clickedSquare) => {
     // Create new squares for the four quadrants of the clicked square
@@ -49,8 +75,10 @@ function App() {
     });
 
     // Add the new squares to the list
+   setPreviousSquares([...previousSquares, [...updatedSquares]]);
     setSquares([...updatedSquares, ...newSquares]);
   };
+
 
   return (
     <div className="animate__animated animate__zoomInDown animate__delay-0.7s">
@@ -67,6 +95,18 @@ function App() {
       <div>
         <h2 style={{ textAlign: "center" }}>Click in the square box</h2>
       </div>
+      <button
+        onClick={handleResetPrevious}
+        style={{ marginLeft: "550px", marginTop: "300px" }}
+      >
+        Reset Previous
+      </button>
+      <button
+        onClick={handleReset}
+        style={{ marginLeft: "550px", marginTop: "3px" }}
+      >
+        Reset all
+      </button>
     </div>
   );
 }
@@ -92,8 +132,21 @@ function Square({ x, y, size, visible, onClick }) {
           <div className="horizontal-line" />
         </>
       )}
+      
     </div>
   );
 }
 
 export default App;
+
+
+//Trials
+// const [originalSquare] = useState(squares[squares.length - 1]);
+
+// const handleReset = () => {
+//   setSquares([originalSquare]);
+// };
+
+// const handleResetPrevious = ()=>{
+
+// };

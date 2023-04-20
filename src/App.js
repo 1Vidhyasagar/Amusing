@@ -34,11 +34,10 @@ function App() {
   };
  
   return (
-    <div class="animate__animated animate__fadeInUpBig animate__delay-0.5s ">
+    <div className=" animate__animated animate__fadeInUpBig animate__delay-0.5s ">
       <div className="container">
         <div className="animate__animated animate__flash animate__slower animate__infinite animate__delay-0.1s">
-          <p className="flash">
-            click the buttons to the right & unleash power! &nbsp;
+          <p className="flash">click the buttons to the right & unleash power! &nbsp;
           </p>
         </div>
         <button onClick={() => handleButtonClick("Problem 1")}>
