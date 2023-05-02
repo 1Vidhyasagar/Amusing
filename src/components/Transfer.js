@@ -30,12 +30,12 @@ function Bucket({ title, items, selectedItems, onChange }) {
 
 function Transfer() {
   const [items1, setItems1] = useState([
-    "Item 1",
-    "Item 2",
-    "Item 3",
-    "Item 4",
-    "Item 5",
-    "Item 6",
+    "Apple",
+    "Banana",
+    "Cherry",
+    "Orange",
+    "Mango",
+    "Papaya",
   ]);
   const [items2, setItems2] = useState([]);
   const [selectedItems1, setSelectedItems1] = useState([]);

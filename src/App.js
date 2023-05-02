@@ -41,19 +41,19 @@ function App() {
           </p>
         </div>
         <button onClick={() => handleButtonClick("Problem 1")}>
-          Problem 1
+          Fruit Transfer
         </button>
         <button onClick={() => handleButtonClick("Problem 2")}>
-          Problem 2
+          Nested info
         </button>
         <button onClick={() => handleButtonClick("Problem 3")}>
-          Problem 3
+          Infinite Scroll
         </button>{" "}
         <button onClick={() => handleButtonClick("Problem 4")}>
-          Problem 4
+          Hit Game
         </button>{" "}
         <button onClick={() => handleButtonClick("Problem 5")}>
-          Problem 5
+          Square splits
         </button>
       </div>
       {renderActiveComponent()}
