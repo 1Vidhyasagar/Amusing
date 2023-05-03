@@ -2,10 +2,12 @@
 .square {
 position: absolute;
 top: 50%;
-border: 2px solid black;
-background-color:rgb(199, 199, 230) ;
+border: 1px solid black;
+background-color:rgb(235, 233, 233) ;
 margin:40px 470px auto;
 text-align: center;
+   opacity: .4;
+
 
 }
 
@@ -16,6 +18,7 @@ text-align: center;
   bottom: 0;
   width: 1px;
   background-color: black;
+
 }
 
 .horizontal-line {
@@ -26,3 +29,4 @@ text-align: center;
   height: 1px;
   background-color: black;
 }
+

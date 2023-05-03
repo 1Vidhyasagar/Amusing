@@ -77,7 +77,8 @@ function Transfer() {
     <div>
       <div className="animate__animated animate__fadeInDownBig animate__delay-0.5s">
         <h2
-          style={{ fontWeight: "bold", textAlign: "center", marginTop: "15px" }}
+          style={{ fontWeight: "bold", textAlign: "center", marginTop: "15px",opacity: .7
+ }}
         >
           You can transfer the items in buckets
         </h2>
@@ -93,7 +94,9 @@ function Transfer() {
           />
         </div>
 
-        <div className="animate__animated animate__zoomIn animate__delay-2s buttons">
+        <div className="animate__animated animate__zoomIn animate__delay-2s buttons" 
+        style={{   opacity: .7
+}}>
           <button type="button" onClick={handleAdd}>
             Add
           </button>

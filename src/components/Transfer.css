@@ -3,14 +3,15 @@
   justify-content:center;
   align-items: center;
   text-align: center;
+  
 }
 
 .bucket {
   width: 250px;
   height:70vh;
-  border: 2px solid #2e2a2a;
   border-radius: 5%;
-background-image: url("https://thumbs.dreamstime.com/z/large-collection-fruits-vegetables-blur-green-background-copy-space-large-collection-fruits-vegetables-blur-104805289.jpg");  
+background-image: url("../fruits.jpg");  
+ opacity:0.6;
 
 }
 
@@ -38,14 +39,14 @@ background-image: url("https://thumbs.dreamstime.com/z/large-collection-fruits-v
 button {
   width:150px;
   background-color: #7c7cd0;
-  border-radius: 5px;
+  border-radius: 8px;
   color: white;
-  padding: 8px 16px;
+  padding: 8px ;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px ;
   cursor: pointer;
 }
 
